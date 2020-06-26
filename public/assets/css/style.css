@@ -1,0 +1,121 @@
+/* config geral do body */
+body{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main list";
+    height: 100vh;
+    margin: 0;
+    font-size: 0.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* estilo do lado do formulario */
+body .main-card{
+    grid-area: main;
+    display: flex;
+    background-color: #a0a0a0;
+    align-items: center;
+    justify-content: center;
+}
+
+form.form-group{
+    width: 85%;
+    border: none;
+    box-shadow: 0px 2px 15px 0px rgba(29, 29, 29, 0.74);
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+button.submit-btn{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=button]:hover {
+    background-color: #45a049;  
+}
+
+div.rows{
+    background-color: #c5c5c5;
+    padding: 10px 20px 4px 20px;
+}
+
+.rows input:focus, .rows input:active{
+    border-color: lightskyblue;
+    background-color: rgba(245, 251, 255, 0.822);
+}
+
+/* estilo do lado da tabela de dados */
+body .list-data{
+    grid-area: list;
+    display: flex;
+    background-color: #f5f5f5;
+    align-items: center;
+}
+
+div.list-data{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px -2px rgba(29, 29, 29, 0.74);
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    text-align: left;
+    padding: 5px;
+}
+
+tr.table-head{
+    background-color: #c5c5c5;
+}
+  
+tr:nth-child(even) {background-color: #e7e7e7;}
+
+button.btn-del{
+    background-color: #f14d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn-del:hover {
+    background-color: #b81212;  
+}
+
+button.btn-update{
+    background-color: #4c5cf1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn-update:hover {
+    background-color: #101cc4;  
+}

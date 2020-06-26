@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CRUD</title>
+</head>
+<body>   
+    <div class="main-card">
+        <form class="form-group" action="#">
+            <input type="hidden" id="key" value="">
+            <div class="rows">
+                <label>Nome</label>
+                <input type="text" id="name" placeholder="Nome">
+            </div>
+            <div class="rows">
+                <label>Telefone</label>
+                <input type="text" inputmode="numeric" minlength="15" maxlength="15" id="phone" placeholder="Telefone">
+            </div>
+            <div class="rows">
+                <label>Idade</label>
+                <input type="text" id="age" inputmode="numeric" maxlength="2" placeholder="Idade">
+            </div>
+            <div class="rows">
+                <label>CPF</label>
+                <input type="text" id="cpf" inputmode="numeric" minlength="14" maxlength="14" placeholder="CPF">
+            </div>
+            <div class="rows">
+                <label>Sexo</label>
+                <select id="sexo">
+                    <option value="" selected disabled hidden>Escolha a opção</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+            </div>
+            <div class="rows">
+                <button type="button" class="submit-btn" onclick="insertClick()">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="list-data">
+        <table id="user-table">
+            <thead>
+                <tr class="table-head">
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Idade</th>
+                    <th>CPF</th>
+                    <th>Sexo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tableValues">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CDN JQuery/Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+    <!-- Arquivos Js do projeto -->
+    <script src="assets/js/dbConfig.js"></script> <!-- arquivo config Firebase -->
+    <script src="assets/js/utils.js"></script> <!-- funçoes uteis -->
+    <script src="assets/js/mask.js"></script> <!-- input masks -->
+    <script src="app.js"></script> <!-- arquivo principal JS -->
+</body>
+</html>
